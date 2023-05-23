@@ -1,0 +1,99 @@
+%YAML:1.0
+---
+Camera.type: eucm
+Distortion.type: none
+EnableDewarp: true
+# Camera left : fx fy cx cy xi alpha beta
+Camera.fx: 2.8751602037018824e+02
+Camera.fy: 2.8805388727697749e+02
+Camera.cx: 3.1544939019888733e+02
+Camera.cy: 1.9914979993192478e+02
+Camera.xi: 0.
+Camera.alpha: 5.6991104055371289e-01
+Camera.beta: 1.1995492756562514e+00
+# Camera left : k1 k2 k3 k4 p1(r1) p2(r2) w
+Camera.k1: 0.
+Camera.k2: 0.
+Camera.k3: 0.
+Camera.k4: 0.
+Camera.p1: 0.
+Camera.p2: 0.
+Camera.w: 0.
+# p1 , intrinsic matrix on base left camera
+p1: !!opencv-matrix
+   rows: 3
+   cols: 4
+   dt: f
+   data: [ 2.87516022e+02, 0., 3.15449402e+02, 0., 0., 2.88053894e+02,
+       1.99149796e+02, 0., 0., 0., 1., 0. ]
+# Camera right : fx fy cx cy xi alpha beta
+Camera2.fx: 2.8740536846544791e+02
+Camera2.fy: 2.8811728811724277e+02
+Camera2.cx: 3.1496334633950318e+02
+Camera2.cy: 1.9827917577724492e+02
+Camera2.xi: 0.
+Camera2.alpha: 5.6907740551370156e-01
+Camera2.beta: 1.1977416486225063e+00
+# Camera right : k1 k2 k3 k4 p1(r1) p2(r2) w
+Camera2.k1: 0.
+Camera2.k2: 0.
+Camera2.k3: 0.
+Camera2.k4: 0.
+Camera2.p1: 0.
+Camera2.p2: 0.
+Camera2.w: 0.
+# p2 , intrinsic matrix on base right camera
+p2: !!opencv-matrix
+   rows: 3
+   cols: 4
+   dt: f
+   data: [ 2.87516022e+02, 0., 3.15449402e+02, -2.31039772e+01, 0.,
+       2.88053894e+02, 1.99149796e+02, 0., 0., 0., 1., 0. ]
+# Camera resolution
+Camera.width: 640
+Camera.height: 400
+# Camera frames per second
+Camera.fps: 30.
+# Color order of the images (0: BGR, 1: RGB. It is ignored if images are grayscale)
+Camera.RGB: 1
+# Image scale, it changes the image size to be processed (<1.0: reduce, >1.0: increase)
+Camera.imageScale: 1
+# Close/Far threshold. Baseline times.
+ThDepth: 80.
+# stereo baseline times fx. = fx * baseline /m
+Camera.bf: 2.3103977203369141e+01
+# Tlr , from right camera to left camera
+Tlr: !!opencv-matrix
+   rows: 4
+   cols: 4
+   dt: f
+   data: [ 9.99637246e-01, -2.35429350e-02, 1.30791515e-02,
+       -8.03571790e-02, 2.35939696e-02, 9.99714553e-01, -3.76146822e-03,
+       -9.33432384e-05, -1.29868621e-02, 4.06869268e-03, 9.99907374e-01,
+       8.82645021e-04, 0., 0., 0., 1. ]
+# Do not insert KFs when recently lost
+InsertKFsWhenLost: 0
+# 
+# ORB Parameters
+# ORB Extractor: Number of features per image
+ORBextractor.nFeatures: 1500
+# ORB Extractor: Scale factor between levels in the scale pyramid
+ORBextractor.scaleFactor: 1.2000000000000000e+00
+# ORB Extractor: Number of levels in the scale pyramid
+ORBextractor.nLevels: 8
+# Image is divided in a grid. At each cell FAST are extracted imposing a minimum response.
+# Firstly we impose iniThFAST. If no corners are detected we impose a lower value minThFAST
+# You can lower these values if your images have low contrast
+ORBextractor.iniThFAST: 20
+ORBextractor.minThFAST: 7
+# Viewer Parameters
+Viewer.KeyFrameSize: 5.0000000000000003e-02
+Viewer.KeyFrameLineWidth: 1
+Viewer.GraphLineWidth: 9.0000000000000002e-01
+Viewer.PointSize: 2
+Viewer.CameraSize: 8.0000000000000002e-02
+Viewer.CameraLineWidth: 3
+Viewer.ViewpointX: 0
+Viewer.ViewpointY: -6.9999999999999996e-01
+Viewer.ViewpointZ: -3.5000000000000000e+00
+Viewer.ViewpointF: 500

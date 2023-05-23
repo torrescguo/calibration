@@ -1,0 +1,32 @@
+Calibration results 
+====================
+Camera-system parameters:
+cam0 (/cam0/image_raw):
+    type: <class 'aslam_cv.libaslam_cv_python.DoubleSphereCameraGeometry'>
+    distortion: [] +- []
+    projection: [  -0.36180699    0.52291931  186.11584403  186.29748783  315.85022639
+  199.79859324] +- [ 0.003254    0.00117269  0.03084204  0.03519811  0.73179826  0.60557691]
+    reprojection error: [-0.000002, -0.000000] +- [0.096810, 0.083686]
+
+cam1 (/cam1/image_raw):
+    type: <class 'aslam_cv.libaslam_cv_python.DoubleSphereCameraGeometry'>
+    distortion: [] +- []
+    projection: [  -0.36060067    0.52243306  186.24117441  186.35462255  315.40796445
+  199.09839714] +- [ 0.00291798  0.00134477  0.02961051  0.0300932   0.76679951  0.71623792]
+    reprojection error: [0.000002, 0.000000] +- [0.090291, 0.093059]
+
+baseline T_1_0:
+    q: [-0.00237184 -0.00683358 -0.01197766  0.9999021 ] +- [ 0.00213824  0.00173055  0.00021777]
+    t: [-0.08079391  0.0000307   0.00014338] +- [ 0.00024628  0.00019509  0.0008633 ]
+
+
+
+Target configuration
+====================
+
+  Type: aprilgrid
+  Tags: 
+    Rows: 6
+    Cols: 6
+    Size: 0.0312 [m]
+    Spacing 0.00959999976 [m]

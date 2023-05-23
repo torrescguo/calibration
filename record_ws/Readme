@@ -1,0 +1,17 @@
+# Use steps
+
+make clean
+
+make build
+
+sh run_record_dataset.sh new 1
+
+#  Data
+
+cam1 #cam1 data
+cam0 #cam0 data
+imu.csv #imu data
+
+# rm data
+
+sh rm_all_record_data.sh

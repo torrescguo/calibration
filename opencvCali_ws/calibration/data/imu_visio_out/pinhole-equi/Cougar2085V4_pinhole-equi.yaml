@@ -1,0 +1,170 @@
+%YAML:1.0
+---
+Camera.type: pinhole
+Distortion.type: equidistant
+EnableDewarp: true
+# Camera left : fx fy cx cy xi alpha beta
+Camera.fx: 2.8286994388586868e+02
+Camera.fy: 2.8334214135495967e+02
+Camera.cx: 3.1458786768688498e+02
+Camera.cy: 1.9907847816725808e+02
+Camera.xi: 0.
+Camera.alpha: 0.
+Camera.beta: 0.
+# Camera left : k1 k2 k3 k4 p1(r1) p2(r2) w
+Camera.k1: 1.1018291766795633e-02
+Camera.k2: -3.1112625663813290e-02
+Camera.k3: 3.8663922819698687e-02
+Camera.k4: -1.3246432186465809e-02
+Camera.p1: 0.
+Camera.p2: 0.
+Camera.w: 0.
+# Camera right : fx fy cx cy xi alpha beta
+Camera2.fx: 2.8387853550009049e+02
+Camera2.fy: 2.8441236915323645e+02
+Camera2.cx: 3.1604641005777103e+02
+Camera2.cy: 2.0021113821016962e+02
+Camera2.xi: 0.
+Camera2.alpha: 0.
+Camera2.beta: 0.
+# Camera right : k1 k2 k3 k4 p1(r1) p2(r2) w
+Camera2.k1: 6.3177213762771580e-03
+Camera2.k2: -2.1592486423281095e-02
+Camera2.k3: 3.1594425066242340e-02
+Camera2.k4: -1.1611071662988966e-02
+Camera2.p1: 0.
+Camera2.p2: 0.
+Camera2.w: 0.
+# Camera resolution
+Camera.width: 640
+Camera.height: 400
+# Camera frames per second
+Camera.fps: 30.
+# Color order of the images (0: BGR, 1: RGB. It is ignored if images are grayscale)
+Camera.RGB: 1
+# Image scale, it changes the image size to be processed (<1.0: reduce, >1.0: increase)
+Camera.imageScale: 1
+# Close/Far threshold. Baseline times.
+ThDepth: 80.
+# stereo baseline times fx. = fx * baseline /m
+Camera.bf: 1.6780000000000001e+01
+# Tbc , from imu to left camera
+Tbc: !!opencv-matrix
+   rows: 4
+   cols: 4
+   dt: f
+   data: [ -9.99922454e-01, -1.23084988e-02, 1.90934690e-03,
+       4.75901812e-02, 1.22960955e-02, -9.99904037e-01, -6.37753680e-03,
+       7.06917141e-03, 1.98766147e-03, -6.35356456e-03, 9.99977827e-01,
+       -3.58185195e-03, 0., 0., 0., 1. ]
+# Tbc1 , from imu to right camera
+Tbc1: !!opencv-matrix
+   rows: 4
+   cols: 4
+   dt: f
+   data: [ -9.99938667e-01, 3.25299636e-03, 1.05875777e-02,
+       -3.32015492e-02, -3.26093193e-03, -9.99994397e-01,
+       -7.32357730e-04, 7.95933604e-03, 1.05851358e-02, -7.66838202e-04,
+       9.99943674e-01, -3.44443251e-03, 0., 0., 0., 1. ]
+# Trl , from left camera to right camera
+Trl: !!opencv-matrix
+   rows: 4
+   cols: 4
+   dt: f
+   data: [ 9.99841273e-01, -1.56155480e-02, 8.57913494e-03,
+       -8.06430578e-02, 1.55677106e-02, 9.99863029e-01, 5.61470585e-03,
+       1.70373736e-04, -8.66563711e-03, -5.48025733e-03, 9.99947429e-01,
+       5.88371302e-04, 0., 0., 0., 1. ]
+# timeshift from cam1 to imu
+IMU.timeshift_cam1_imu: 1.3062806101515889e-03
+# timeshift from cam2 to imu
+IMU.timeshift_cam2_imu: 1.3259175466373563e-03
+# Do not insert KFs when recently lost
+InsertKFsWhenLost: 0
+# IMU noise (Use those from VINS-mono)
+IMU.NoiseGyro: 2.6087914593517780e-03
+IMU.NoiseAcc: 3.2043348997831345e-02
+IMU.GyroWalk: 2.7449037588667125e-05
+IMU.AccWalk: 1.0029883123934269e-03
+# IMU Frequency)
+IMU.Frequency: 200
+# 
+# ORB Parameters
+# ORB Extractor: Number of features per image
+ORBextractor.nFeatures: 1500
+# ORB Extractor: Scale factor between levels in the scale pyramid
+ORBextractor.scaleFactor: 1.2000000000000000e+00
+# ORB Extractor: Number of levels in the scale pyramid
+ORBextractor.nLevels: 8
+# Image is divided in a grid. At each cell FAST are extracted imposing a minimum response.
+# Firstly we impose iniThFAST. If no corners are detected we impose a lower value minThFAST
+# You can lower these values if your images have low contrast
+ORBextractor.iniThFAST: 20
+ORBextractor.minThFAST: 7
+# Viewer Parameters
+Viewer.KeyFrameSize: 5.0000000000000003e-02
+Viewer.KeyFrameLineWidth: 1
+Viewer.GraphLineWidth: 9.0000000000000002e-01
+Viewer.PointSize: 2
+Viewer.CameraSize: 8.0000000000000002e-02
+Viewer.CameraLineWidth: 3
+Viewer.ViewpointX: 0
+Viewer.ViewpointY: -6.9999999999999996e-01
+Viewer.ViewpointZ: -3.5000000000000000e+00
+Viewer.ViewpointF: 500
+...
+---
+r1: !!opencv-matrix
+   rows: 3
+   cols: 3
+   dt: f
+   data: [ 9.99841571e-01, -1.56362727e-02, 8.50606058e-03,
+       1.56126125e-02, 9.99874055e-01, 2.84076249e-03, -8.54940806e-03,
+       -2.70751072e-03, 9.99959767e-01 ]
+r2: !!opencv-matrix
+   rows: 3
+   cols: 3
+   dt: f
+   data: [ 1., -2.11268944e-05, -7.29599415e-05, 2.09244045e-05,
+       9.99996126e-01, -2.77424720e-03, 7.30182728e-05, 2.77424580e-03,
+       9.99996126e-01 ]
+p1: !!opencv-matrix
+   rows: 3
+   cols: 4
+   dt: f
+   data: [ 2.14155167e+02, 0., 3.05974335e+02, 0., 0., 2.14155167e+02,
+       1.99386139e+02, 0., 0., 0., 1., 0. ]
+p2: !!opencv-matrix
+   rows: 3
+   cols: 4
+   dt: f
+   data: [ 2.14155167e+02, 0., 3.05974335e+02, -1.72701270e+03, 0.,
+       2.14155167e+02, 1.99386139e+02, 0., 0., 0., 1., 0. ]
+q: !!opencv-matrix
+   rows: 4
+   cols: 4
+   dt: f
+   data: [ 1., 0., 0., -3.05974335e+02, 0., 1., 0., -1.99386139e+02, 0.,
+       0., 0., 2.14155167e+02, 0., 0., 1.24003232e-01, 0. ]
+Tlr: !!opencv-matrix
+   rows: 4
+   cols: 4
+   dt: f
+   data: [ 9.99841273e-01, 1.55677116e-02, -8.66563711e-03,
+       8.06327015e-02, -1.56155471e-02, 9.99863088e-01, -5.48025733e-03,
+       -1.42641144e-03, 8.57913494e-03, 5.61470632e-03, 9.99947429e-01,
+       1.02550723e-04, 0., 0., 0., 1. ]
+prInv1: !!opencv-matrix
+   rows: 3
+   cols: 3
+   dt: f
+   data: [ 4.66877175e-03, 7.29032763e-05, -1.45160961e+00,
+       -7.30137544e-05, 4.66892356e-03, -9.11285818e-01, 3.97191470e-05,
+       1.32649729e-05, 9.85161901e-01 ]
+prInv2: !!opencv-matrix
+   rows: 3
+   cols: 3
+   dt: f
+   data: [ 4.66951169e-03, 9.77067458e-08, -1.42869711e+00,
+       -9.86522792e-08, 4.66949353e-03, -9.28227842e-01, -3.40687308e-07,
+       -1.29543796e-05, 1.00268328e+00 ]

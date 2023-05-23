@@ -1,0 +1,8 @@
+prefix=/home/hubery/hubery_ff/calibration/kalibr_ws/devel
+
+Name: sm_random
+Description: Description of sm_random
+Version: 0.0.1
+Cflags: -I/home/hubery/hubery_ff/calibration/kalibr_ws/src/kalibr_cp/Schweizer-Messer/sm_random/include
+Libs: -L${prefix}/lib -lsm_random
+Requires: 

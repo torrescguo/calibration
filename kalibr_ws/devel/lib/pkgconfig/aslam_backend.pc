@@ -1,0 +1,8 @@
+prefix=/home/hubery/hubery_ff/calibration/kalibr_ws/devel
+
+Name: aslam_backend
+Description: Description of aslam_backend
+Version: 0.0.1
+Cflags: -I/home/hubery/hubery_ff/calibration/kalibr_ws/src/kalibr_cp/aslam_optimizer/aslam_backend/include -I/usr/include
+Libs: -L${prefix}/lib -laslam_backend /usr/lib/x86_64-linux-gnu/libboost_system.so /usr/lib/x86_64-linux-gnu/libboost_thread.so /usr/lib/x86_64-linux-gnu/libboost_chrono.so /usr/lib/x86_64-linux-gnu/libboost_date_time.so /usr/lib/x86_64-linux-gnu/libboost_atomic.so /usr/lib/x86_64-linux-gnu/libpthread.so
+Requires: sparse_block_matrix sm_boost sm_random sm_timing sm_logging sm_property_tree
