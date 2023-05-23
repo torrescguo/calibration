@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC  -Wall -D__STRICT_ANSI__ -O3 -DNDEBUG  -shared -Wl,-soname,libsm_common.so -o /home/hubery/hubery_ff/calibration/kalibr_ws/devel/lib/libsm_common.so CMakeFiles/sm_common.dir/src/progress_info.cpp.o -lboost_system 

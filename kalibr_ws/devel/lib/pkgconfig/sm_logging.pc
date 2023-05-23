@@ -1,0 +1,8 @@
+prefix=/home/hubery/hubery_ff/calibration/kalibr_ws/devel
+
+Name: sm_logging
+Description: Description of sm_logging
+Version: 0.0.1
+Cflags: -I/home/hubery/hubery_ff/calibration/kalibr_ws/src/kalibr_cp/Schweizer-Messer/sm_logging/include
+Libs: -L${prefix}/lib -lsm_logging
+Requires: 

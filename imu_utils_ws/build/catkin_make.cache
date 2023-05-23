@@ -1,0 +1,2 @@
+code_utils_cp:imu_utils_cp
+-DCMAKE_BUILD_TYPE=Release -DCATKIN_DEVEL_PREFIX=/home/hubery/hubery_ff/calibration/imu_utils_ws/devel -DCMAKE_INSTALL_PREFIX=/home/hubery/hubery_ff/calibration/imu_utils_ws/install -G Unix Makefiles

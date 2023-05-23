@@ -1,0 +1,135 @@
+%YAML:1.0
+---
+Camera.type: ds
+Distortion.type: none
+EnableDewarp: true
+# Camera left : fx fy cx cy xi alpha beta
+Camera.fx: 2.0086134733926920e+02
+Camera.fy: 2.0114091548356092e+02
+Camera.cx: 3.1562323867381002e+02
+Camera.cy: 1.9904803515215116e+02
+Camera.xi: -3.0221381782770596e-01
+Camera.alpha: 5.4951148872181532e-01
+Camera.beta: 0.
+# Camera left : k1 k2 k3 k4 p1(r1) p2(r2) w
+Camera.k1: 0.
+Camera.k2: 0.
+Camera.k3: 0.
+Camera.k4: 0.
+Camera.p1: 0.
+Camera.p2: 0.
+Camera.w: 0.
+# p1 , intrinsic matrix on base left camera
+p1: !!opencv-matrix
+   rows: 3
+   cols: 4
+   dt: f
+   data: [ 2.00861343e+02, 0., 3.15623230e+02, 0., 0., 2.01140915e+02,
+       1.99048035e+02, 0., 0., 0., 1., 0. ]
+# Camera right : fx fy cx cy xi alpha beta
+Camera2.fx: 2.0064308518388555e+02
+Camera2.fy: 2.0101427866255517e+02
+Camera2.cx: 3.1534443737249740e+02
+Camera2.cy: 1.9816793088440872e+02
+Camera2.xi: -3.0290090176133311e-01
+Camera2.alpha: 5.4842170358800924e-01
+Camera2.beta: 0.
+# Camera right : k1 k2 k3 k4 p1(r1) p2(r2) w
+Camera2.k1: 0.
+Camera2.k2: 0.
+Camera2.k3: 0.
+Camera2.k4: 0.
+Camera2.p1: 0.
+Camera2.p2: 0.
+Camera2.w: 0.
+# p2 , intrinsic matrix on base right camera
+p2: !!opencv-matrix
+   rows: 3
+   cols: 4
+   dt: f
+   data: [ 2.00861343e+02, 0., 3.15623230e+02, -2.31510601e+01, 0.,
+       2.01140915e+02, 1.99048035e+02, 0., 0., 0., 1., 0. ]
+# Camera resolution
+Camera.width: 640
+Camera.height: 400
+# Camera frames per second
+Camera.fps: 30.
+# Color order of the images (0: BGR, 1: RGB. It is ignored if images are grayscale)
+Camera.RGB: 1
+# Image scale, it changes the image size to be processed (<1.0: reduce, >1.0: increase)
+Camera.imageScale: 1
+# Close/Far threshold. Baseline times.
+ThDepth: 80.
+# stereo baseline times fx. = fx * baseline /m
+Camera.bf: 2.3151060104370117e+01
+# Tbc1 , from imu to left camera
+Tbc1: !!opencv-matrix
+   rows: 4
+   cols: 4
+   dt: f
+   data: [ 9.99744713e-01, 1.59588009e-02, -1.59936417e-02,
+       4.75761257e-02, -1.60246398e-02, 9.99863625e-01, -3.99679923e-03,
+       6.01860788e-03, 1.59276761e-02, 4.25207149e-03, 9.99864101e-01,
+       2.70017376e-03, 0., 0., 0., 1. ]
+# Tbc2 , from imu to right camera
+Tbc2: !!opencv-matrix
+   rows: 4
+   cols: 4
+   dt: f
+   data: [ 9.99966204e-01, -7.50140473e-03, -3.37036233e-03,
+       -3.29745188e-02, 7.47405877e-03, 9.99939620e-01, -8.05420056e-03,
+       7.02332007e-03, 3.43057676e-03, 8.02873727e-03, 9.99961913e-01,
+       2.99824052e-03, 0., 0., 0., 1. ]
+# Tlr , from right camera to left camera
+Tlr: !!opencv-matrix
+   rows: 4
+   cols: 4
+   dt: f
+   data: [ 9.99645114e-01, -2.35110074e-02, 1.25253359e-02,
+       -8.04260746e-02, 2.35588048e-02, 9.99715686e-01, -3.68224643e-03,
+       -1.04470448e-04, -1.24352016e-02, 3.97602143e-03, 9.99914765e-01,
+       8.65985465e-04, 0., 0., 0., 1. ]
+# Tib , from imu to imu
+Tib: !!opencv-matrix
+   rows: 4
+   cols: 4
+   dt: f
+   data: [ 1., 0., 0., 0., 0., 1., 0., 0., 0., 0., 1., 0., 0., 0., 0.,
+       1. ]
+# timeshift from cam1 to imu
+IMU.timeshift_cam1_imu: -1.6785834450274706e-03
+# timeshift from cam2 to imu
+IMU.timeshift_cam2_imu: -1.7041225219145417e-03
+# Do not insert KFs when recently lost
+InsertKFsWhenLost: 0
+# IMU noise (Use those from VINS-mono)
+IMU.NoiseGyro: 5.2065802738070488e-03
+IMU.NoiseAcc: 5.5650476366281509e-02
+IMU.GyroWalk: 9.7910189651884139e-05
+IMU.AccWalk: 9.3594461213797331e-04
+# IMU Frequency)
+IMU.Frequency: 1000.
+# 
+# ORB Parameters
+# ORB Extractor: Number of features per image
+ORBextractor.nFeatures: 1500
+# ORB Extractor: Scale factor between levels in the scale pyramid
+ORBextractor.scaleFactor: 1.2000000000000000e+00
+# ORB Extractor: Number of levels in the scale pyramid
+ORBextractor.nLevels: 8
+# Image is divided in a grid. At each cell FAST are extracted imposing a minimum response.
+# Firstly we impose iniThFAST. If no corners are detected we impose a lower value minThFAST
+# You can lower these values if your images have low contrast
+ORBextractor.iniThFAST: 20
+ORBextractor.minThFAST: 7
+# Viewer Parameters
+Viewer.KeyFrameSize: 5.0000000000000003e-02
+Viewer.KeyFrameLineWidth: 1
+Viewer.GraphLineWidth: 9.0000000000000002e-01
+Viewer.PointSize: 2
+Viewer.CameraSize: 8.0000000000000002e-02
+Viewer.CameraLineWidth: 3
+Viewer.ViewpointX: 0
+Viewer.ViewpointY: -6.9999999999999996e-01
+Viewer.ViewpointZ: -3.5000000000000000e+00
+Viewer.ViewpointF: 500

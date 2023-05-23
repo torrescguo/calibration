@@ -1,0 +1,2 @@
+/usr/bin/ar qc /home/hubery/hubery_ff/calibration/imu_utils_ws/devel/lib/libpolynomial.a  CMakeFiles/polynomial.dir/src/math_utils/Polynomial.cpp.o
+/usr/bin/ranlib /home/hubery/hubery_ff/calibration/imu_utils_ws/devel/lib/libpolynomial.a
