@@ -1,8 +1,0 @@
-prefix=/home/hubery/hubery_ff/calibration/kalibr_ws/install
-
-Name: sm_boost
-Description: Description of sm_boost
-Version: 0.0.1
-Cflags: -I${prefix}/include -I/home/hubery/hubery_ff/calibration/kalibr_ws/src/kalibr_cp/Schweizer-Messer/sm_common/include -I/usr/include
-Libs: -L${prefix}/lib -lsm_boost
-Requires: sm_common

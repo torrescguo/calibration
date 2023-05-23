@@ -1,8 +1,0 @@
-prefix=/home/hubery/hubery_ff/calibration/kalibr_ws/install
-
-Name: incremental_calibration_python
-Description: Description of incremental_calibration_python
-Version: 0.0.1
-Cflags: -I${prefix}/include
-Libs: -L${prefix}/lib 
-Requires: 

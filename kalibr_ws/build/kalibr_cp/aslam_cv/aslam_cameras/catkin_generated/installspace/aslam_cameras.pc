@@ -1,8 +1,0 @@
-prefix=/home/hubery/hubery_ff/calibration/kalibr_ws/install
-
-Name: aslam_cameras
-Description: Description of aslam_cameras
-Version: 0.0.1
-Cflags: -I${prefix}/include -I/usr/include
-Libs: -L${prefix}/lib -laslam_cameras /usr/lib/x86_64-linux-gnu/libboost_system.so /usr/lib/x86_64-linux-gnu/libboost_serialization.so /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
-Requires: 

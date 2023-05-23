@@ -1,8 +1,0 @@
-prefix=/home/hubery/hubery_ff/calibration/kalibr_ws/devel
-
-Name: aslam_time
-Description: Description of aslam_time
-Version: 0.0.1
-Cflags: -I/home/hubery/hubery_ff/calibration/kalibr_ws/src/kalibr_cp/aslam_cv/aslam_time/include -I/usr/include
-Libs: -L${prefix}/lib -laslam_time /usr/lib/x86_64-linux-gnu/libboost_system.so
-Requires: 
